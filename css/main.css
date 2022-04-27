@@ -1,0 +1,280 @@
+@font-face {
+    font-family: GilroyExtraBold;
+    src: url(../fonts/Gilroy-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: GilroySemiBold;
+    src: url(../fonts/Gilroy-SemiBold.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #2e2e2e;
+}
+
+.nav-list {
+    background: #1db954;
+    margin: 20px 20px;
+    padding: 1rem 0;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    font-family: GilroyExtraBold, serif;
+    font-size: 1.3em;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.nav-item {
+    list-style: none;
+    margin: .2em;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.nav-item img {
+    padding-top: 4px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.nav-item a.active {
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #1db954;
+}
+
+.nav-item a:hover {
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #1db954;
+}
+
+.nav-item:first-child {
+    margin-right: auto;
+    margin-left: 1rem;
+}
+
+.nav-item:last-child a {
+    margin-left: 2rem;
+    margin-right: 1.5rem;
+    background-color: #2e2e2e;
+    border-radius: 5px;
+    color: #1db954;
+}
+
+.nav-item:last-child a:hover {
+    background-color: #ffffff;
+}
+
+.heading h1 {
+    font-family: GilroyExtraBold, serif;
+    color: #1db954;
+    font-size: 4em;
+}
+
+.heading h2 {
+    font-family: GilroySemiBold, serif;
+    color: #ffffff63;
+    font-size: 1.5em;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.content {
+    padding: 50px;
+    padding-top: 0;
+}
+
+.heading {
+    max-width: 700px;
+}
+
+#phone {
+    position: relative;
+    z-index: 2;
+    float: right;
+    max-width: 100%;
+    height: auto;
+}
+
+.flex {
+    /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.waves {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+}
+
+/* Animation */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+.container {
+    max-width: 1000px;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    margin-left: 0px;
+    margin-top: 0px;
+    border-radius: 8px;
+}
+
+.card h2 {
+    text-align: center;
+    font-family: GilroyExtraBold;
+    color: #1db954;
+}
+
+.card p {
+    text-align: center;
+    font-family: GilroySemiBold;
+    font-size: larger;
+    padding: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#discord {
+    text-align: center;
+    position: fixed;
+    z-index: 10;
+    bottom: 10px;
+    right: 10px;
+}
+
+#discord img{
+    width:60px;
+    height: auto;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .content {
+        height: 30vh;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+
+@media only screen and (max-width: 1060px) {
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-item:last-child a {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .nav-item {
+        padding: 1rem;
+        margin: .2em;
+    }
+
+    .nav-item:first-child {
+        margin-right: 3rem;
+        margin-left: 0;
+    }
+
+    #phone {
+        display: none
+    }
+
+    .content {
+        margin-bottom: 50px;
+    }
+
+    .container {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 1385px) {
+    #phone {
+        display: none
+    }
+
+    .container {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
