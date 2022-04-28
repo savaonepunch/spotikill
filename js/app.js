@@ -1,4 +1,4 @@
-var baseurl = "http://localhost:5500/"
+var baseurl = "https://kingupgrader.cc"
 
 var errorCodes = {
 

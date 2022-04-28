@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">h</script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+    </script>
+    <script src="./js/app.js"></script>
+    <title>SpotiKill - Upgrade</title>
+</head>
+
+<body>
+    <div class="pop-cont" style="display: none;" id="pop-cont">
+        <div class="popup">
+            <div class="popup-container">
+                <i class="fa-solid fa-circle-exclamation fa-5x"></i>
+                <span id="popText" h="">asdasd</span>
+                <button id="pop-btn" class="buyBtn">OK </button>
+            </div>
+            
+        </div>
+    </div>
+
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <img src="./img/logo.png" alt="">
+            </li>
+            <li class="nav-item">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="active" href="upgrade.html">Upgrade</a>
+            </li>
+            <li class="nav-item">
+                <a href="#">Stock</a>
+            </li>
+            <li class="nav-item">
+                <a href="#">Renew</a>
+            </li>
+            <li class="nav-item">
+                <a href="#">Resell</a>
+            </li>
+            <li id="pricing" class="nav-item">
+                <a href="#">Prices</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="heading">
+            <h1>Upgrade.</h1>
+            <h2>
+                Enter your token, select your country and click submit, then, just wait!
+            </h2>
+        </div>
+    </div>
+
+    <div class="upgrade-container">
+        <form id="upgradeForm">
+            <label>Key:</label>
+            <input type="text" id="key">
+            <label style="display:none;" class="jstoggle">Email:</label>
+            <input style="display:none;" class="jstoggle" type="text" id="email">
+            <label style="display:none;" class="jstoggle">Password:</label>
+            <input style="display:none;" class="jstoggle" type="text" id="password">
+            <label style="display:none;" class="jstoggle">Country:</label>
+            <select style="display:none;" class="jstoggle" id="country" name="country">
+                <option class="countrySelect">Select a Country</option>
+                <option class="countrySelect" value="AF">Afghanistan - 0</option>
+                <option class="countrySelect" value="AX">Aland Islands - 0</option>
+                <option class="countrySelect" value="AL">Albania - 0</option>
+                <option class="countrySelect" value="DZ">Algeria - 0</option>
+                <option class="countrySelect" value="AS">American Samoa - 0</option>
+                <option class="countrySelect" value="AD">Andorra - 0</option>
+                <option class="countrySelect" value="AO">Angola - 0</option>
+                <option class="countrySelect" value="AI">Anguilla - 0</option>
+                <option class="countrySelect" value="AQ">Antarctica - 0</option>
+                <option class="countrySelect" value="AG">Antigua and Barbuda - 0</option>
+                <option class="countrySelect" value="AR">Argentina - 0</option>
+                <option class="countrySelect" value="AM">Armenia - 0</option>
+                <option class="countrySelect" value="AW">Aruba - 0</option>
+                <option class="countrySelect" value="AU">Australia - 0</option>
+                <option class="countrySelect" value="AT">Austria - 0</option>
+                <option class="countrySelect" value="AZ">Azerbaijan - 0</option>
+                <option class="countrySelect" value="BS">Bahamas - 0</option>
+                <option class="countrySelect" value="BH">Bahrain - 0</option>
+                <option class="countrySelect" value="BD">Bangladesh - 0</option>
+                <option class="countrySelect" value="BB">Barbados - 0</option>
+                <option class="countrySelect" value="BY">Belarus - 0</option>
+                <option class="countrySelect" value="BE">Belgium - 0</option>
+                <option class="countrySelect" value="BZ">Belize - 0</option>
+                <option class="countrySelect" value="BJ">Benin - 0</option>
+                <option class="countrySelect" value="BM">Bermuda - 0</option>
+                <option class="countrySelect" value="BT">Bhutan - 0</option>
+                <option class="countrySelect" value="BO">Bolivia - 0</option>
+                <option class="countrySelect" value="BQ">Bonaire, Sint Eustatius and Saba - 0</option>
+                <option class="countrySelect" value="BA">Bosnia and Herzegovina - 0</option>
+                <option class="countrySelect" value="BW">Botswana - 0</option>
+                <option class="countrySelect" value="BV">Bouvet Island - 0</option>
+                <option class="countrySelect" value="BR">Brazil - 0</option>
+                <option class="countrySelect" value="IO">British Indian Ocean Territory - 0</option>
+                <option class="countrySelect" value="BN">Brunei Darussalam - 0</option>
+                <option class="countrySelect" value="BG">Bulgaria - 0</option>
+                <option class="countrySelect" value="BF">Burkina Faso - 0</option>
+                <option class="countrySelect" value="BI">Burundi - 0</option>
+                <option class="countrySelect" value="KH">Cambodia - 0</option>
+                <option class="countrySelect" value="CM">Cameroon - 0</option>
+                <option class="countrySelect" value="CA">Canada - 0</option>
+                <option class="countrySelect" value="CV">Cape Verde - 0</option>
+                <option class="countrySelect" value="KY">Cayman Islands - 0</option>
+                <option class="countrySelect" value="CF">Central African Republic - 0</option>
+                <option class="countrySelect" value="TD">Chad - 0</option>
+                <option class="countrySelect" value="CL">Chile - 0</option>
+                <option class="countrySelect" value="CN">China - 0</option>
+                <option class="countrySelect" value="CX">Christmas Island - 0</option>
+                <option class="countrySelect" value="CC">Cocos (Keeling) Islands - 0</option>
+                <option class="countrySelect" value="CO">Colombia - 0</option>
+                <option class="countrySelect" value="KM">Comoros - 0</option>
+                <option class="countrySelect" value="CG">Congo - 0</option>
+                <option class="countrySelect" value="CD">Congo, Democratic Republic of the Congo - 0</option>
+                <option class="countrySelect" value="CK">Cook Islands - 0</option>
+                <option class="countrySelect" value="CR">Costa Rica - 0</option>
+                <option class="countrySelect" value="CI">Cote D'Ivoire - 0</option>
+                <option class="countrySelect" value="HR">Croatia - 0</option>
+                <option class="countrySelect" value="CU">Cuba - 0</option>
+                <option class="countrySelect" value="CW">Curacao - 0</option>
+                <option class="countrySelect" value="CY">Cyprus - 0</option>
+                <option class="countrySelect" value="CZ">Czech Republic - 0</option>
+                <option class="countrySelect" value="DK">Denmark - 0</option>
+                <option class="countrySelect" value="DJ">Djibouti - 0</option>
+                <option class="countrySelect" value="DM">Dominica - 0</option>
+                <option class="countrySelect" value="DO">Dominican Republic - 0</option>
+                <option class="countrySelect" value="EC">Ecuador - 0</option>
+                <option class="countrySelect" value="EG">Egypt - 0</option>
+                <option class="countrySelect" value="SV">El Salvador - 0</option>
+                <option class="countrySelect" value="GQ">Equatorial Guinea - 0</option>
+                <option class="countrySelect" value="ER">Eritrea - 0</option>
+                <option class="countrySelect" value="EE">Estonia - 0</option>
+                <option class="countrySelect" value="ET">Ethiopia - 0</option>
+                <option class="countrySelect" value="FK">Falkland Islands (Malvinas) - 0</option>
+                <option class="countrySelect" value="FO">Faroe Islands - 0</option>
+                <option class="countrySelect" value="FJ">Fiji - 0</option>
+                <option class="countrySelect" value="FI">Finland - 0</option>
+                <option class="countrySelect" value="FR">France - 0</option>
+                <option class="countrySelect" value="GF">French Guiana - 0</option>
+                <option class="countrySelect" value="PF">French Polynesia - 0</option>
+                <option class="countrySelect" value="TF">French Southern Territories - 0</option>
+                <option class="countrySelect" value="GA">Gabon - 0</option>
+                <option class="countrySelect" value="GM">Gambia - 0</option>
+                <option class="countrySelect" value="GE">Georgia - 0</option>
+                <option class="countrySelect" value="DE">Germany - 0</option>
+                <option class="countrySelect" value="GH">Ghana - 0</option>
+                <option class="countrySelect" value="GI">Gibraltar - 0</option>
+                <option class="countrySelect" value="GR">Greece - 0</option>
+                <option class="countrySelect" value="GL">Greenland - 0</option>
+                <option class="countrySelect" value="GD">Grenada - 0</option>
+                <option class="countrySelect" value="GP">Guadeloupe - 0</option>
+                <option class="countrySelect" value="GU">Guam - 0</option>
+                <option class="countrySelect" value="GT">Guatemala - 0</option>
+                <option class="countrySelect" value="GG">Guernsey - 0</option>
+                <option class="countrySelect" value="GN">Guinea - 0</option>
+                <option class="countrySelect" value="GW">Guinea-Bissau - 0</option>
+                <option class="countrySelect" value="GY">Guyana - 0</option>
+                <option class="countrySelect" value="HT">Haiti - 0</option>
+                <option class="countrySelect" value="HM">Heard Island and Mcdonald Islands - 0</option>
+                <option class="countrySelect" value="VA">Holy See (Vatican City State) - 0</option>
+                <option class="countrySelect" value="HN">Honduras - 0</option>
+                <option class="countrySelect" value="HK">Hong Kong - 0</option>
+                <option class="countrySelect" value="HU">Hungary - 0</option>
+                <option class="countrySelect" value="IS">Iceland - 0</option>
+                <option class="countrySelect" value="IN">India - 0</option>
+                <option class="countrySelect" value="ID">Indonesia - 0</option>
+                <option class="countrySelect" value="IR">Iran, Islamic Republic of - 0</option>
+                <option class="countrySelect" value="IQ">Iraq - 0</option>
+                <option class="countrySelect" value="IE">Ireland - 0</option>
+                <option class="countrySelect" value="IM">Isle of Man - 0</option>
+                <option class="countrySelect" value="IL">Israel - 0</option>
+                <option class="countrySelect" value="IT">Italy - 0</option>
+                <option class="countrySelect" value="JM">Jamaica - 0</option>
+                <option class="countrySelect" value="JP">Japan - 0</option>
+                <option class="countrySelect" value="JE">Jersey - 0</option>
+                <option class="countrySelect" value="JO">Jordan - 0</option>
+                <option class="countrySelect" value="KZ">Kazakhstan - 0</option>
+                <option class="countrySelect" value="KE">Kenya - 0</option>
+                <option class="countrySelect" value="KI">Kiribati - 0</option>
+                <option class="countrySelect" value="KP">Korea, Democratic People's Republic of - 0</option>
+                <option class="countrySelect" value="KR">Korea, Republic of - 0</option>
+                <option class="countrySelect" value="XK">Kosovo - 0</option>
+                <option class="countrySelect" value="KW">Kuwait - 0</option>
+                <option class="countrySelect" value="KG">Kyrgyzstan - 0</option>
+                <option class="countrySelect" value="LA">Lao People's Democratic Republic - 0</option>
+                <option class="countrySelect" value="LV">Latvia - 0</option>
+                <option class="countrySelect" value="LB">Lebanon - 0</option>
+                <option class="countrySelect" value="LS">Lesotho - 0</option>
+                <option class="countrySelect" value="LR">Liberia - 0</option>
+                <option class="countrySelect" value="LY">Libyan Arab Jamahiriya - 0</option>
+                <option class="countrySelect" value="LI">Liechtenstein - 0</option>
+                <option class="countrySelect" value="LT">Lithuania - 0</option>
+                <option class="countrySelect" value="LU">Luxembourg - 0</option>
+                <option class="countrySelect" value="MO">Macao - 0</option>
+                <option class="countrySelect" value="MK">Macedonia, the Former Yugoslav Republic of - 0</option>
+                <option class="countrySelect" value="MG">Madagascar - 0</option>
+                <option class="countrySelect" value="MW">Malawi - 0</option>
+                <option class="countrySelect" value="MY">Malaysia - 0</option>
+                <option class="countrySelect" value="MV">Maldives - 0</option>
+                <option class="countrySelect" value="ML">Mali - 0</option>
+                <option class="countrySelect" value="MT">Malta - 0</option>
+                <option class="countrySelect" value="MH">Marshall Islands - 0</option>
+                <option class="countrySelect" value="MQ">Martinique - 0</option>
+                <option class="countrySelect" value="MR">Mauritania - 0</option>
+                <option class="countrySelect" value="MU">Mauritius - 0</option>
+                <option class="countrySelect" value="YT">Mayotte - 0</option>
+                <option class="countrySelect" value="MX">Mexico - 0</option>
+                <option class="countrySelect" value="FM">Micronesia, Federated States of - 0</option>
+                <option class="countrySelect" value="MD">Moldova, Republic of - 0</option>
+                <option class="countrySelect" value="MC">Monaco - 0</option>
+                <option class="countrySelect" value="MN">Mongolia - 0</option>
+                <option class="countrySelect" value="ME">Montenegro - 0</option>
+                <option class="countrySelect" value="MS">Montserrat - 0</option>
+                <option class="countrySelect" value="MA">Morocco - 0</option>
+                <option class="countrySelect" value="MZ">Mozambique - 0</option>
+                <option class="countrySelect" value="MM">Myanmar - 0</option>
+                <option class="countrySelect" value="NA">Namibia - 0</option>
+                <option class="countrySelect" value="NR">Nauru - 0</option>
+                <option class="countrySelect" value="NP">Nepal - 0</option>
+                <option class="countrySelect" value="NL">Netherlands - 0</option>
+                <option class="countrySelect" value="AN">Netherlands Antilles - 0</option>
+                <option class="countrySelect" value="NC">New Caledonia - 0</option>
+                <option class="countrySelect" value="NZ">New Zealand - 0</option>
+                <option class="countrySelect" value="NI">Nicaragua - 0</option>
+                <option class="countrySelect" value="NE">Niger - 0</option>
+                <option class="countrySelect" value="NG">Nigeria - 0</option>
+                <option class="countrySelect" value="NU">Niue - 0</option>
+                <option class="countrySelect" value="NF">Norfolk Island - 0</option>
+                <option class="countrySelect" value="MP">Northern Mariana Islands - 0</option>
+                <option class="countrySelect" value="NO">Norway - 0</option>
+                <option class="countrySelect" value="OM">Oman - 0</option>
+                <option class="countrySelect" value="PK">Pakistan - 0</option>
+                <option class="countrySelect" value="PW">Palau - 0</option>
+                <option class="countrySelect" value="PS">Palestinian Territory, Occupied - 0</option>
+                <option class="countrySelect" value="PA">Panama - 0</option>
+                <option class="countrySelect" value="PG">Papua New Guinea - 0</option>
+                <option class="countrySelect" value="PY">Paraguay - 0</option>
+                <option class="countrySelect" value="PE">Peru - 0</option>
+                <option class="countrySelect" value="PH">Philippines - 0</option>
+                <option class="countrySelect" value="PN">Pitcairn - 0</option>
+                <option class="countrySelect" value="PL">Poland - 0</option>
+                <option class="countrySelect" value="PT">Portugal - 0</option>
+                <option class="countrySelect" value="PR">Puerto Rico - 0</option>
+                <option class="countrySelect" value="QA">Qatar - 0</option>
+                <option class="countrySelect" value="RE">Reunion - 0</option>
+                <option class="countrySelect" value="RO">Romania - 0</option>
+                <option class="countrySelect" value="RU">Russian Federation - 0</option>
+                <option class="countrySelect" value="RW">Rwanda - 0</option>
+                <option class="countrySelect" value="BL">Saint Barthelemy - 0</option>
+                <option class="countrySelect" value="SH">Saint Helena - 0</option>
+                <option class="countrySelect" value="KN">Saint Kitts and Nevis - 0</option>
+                <option class="countrySelect" value="LC">Saint Lucia - 0</option>
+                <option class="countrySelect" value="MF">Saint Martin - 0</option>
+                <option class="countrySelect" value="PM">Saint Pierre and Miquelon - 0</option>
+                <option class="countrySelect" value="VC">Saint Vincent and the Grenadines - 0</option>
+                <option class="countrySelect" value="WS">Samoa - 0</option>
+                <option class="countrySelect" value="SM">San Marino - 0</option>
+                <option class="countrySelect" value="ST">Sao Tome and Principe - 0</option>
+                <option class="countrySelect" value="SA">Saudi Arabia - 0</option>
+                <option class="countrySelect" value="SN">Senegal - 0</option>
+                <option class="countrySelect" value="RS">Serbia - 0</option>
+                <option class="countrySelect" value="CS">Serbia and Montenegro - 0</option>
+                <option class="countrySelect" value="SC">Seychelles - 0</option>
+                <option class="countrySelect" value="SL">Sierra Leone - 0</option>
+                <option class="countrySelect" value="SG">Singapore - 0</option>
+                <option class="countrySelect" value="SX">Sint Maarten - 0</option>
+                <option class="countrySelect" value="SK">Slovakia - 0</option>
+                <option class="countrySelect" value="SI">Slovenia - 0</option>
+                <option class="countrySelect" value="SB">Solomon Islands - 0</option>
+                <option class="countrySelect" value="SO">Somalia - 0</option>
+                <option class="countrySelect" value="ZA">South Africa - 0</option>
+                <option class="countrySelect" value="GS">South Georgia and the South Sandwich Islands - 0</option>
+                <option class="countrySelect" value="SS">South Sudan - 0</option>
+                <option class="countrySelect" value="ES">Spain - 0</option>
+                <option class="countrySelect" value="LK">Sri Lanka - 0</option>
+                <option class="countrySelect" value="SD">Sudan - 0</option>
+                <option class="countrySelect" value="SR">Suriname - 0</option>
+                <option class="countrySelect" value="SJ">Svalbard and Jan Mayen - 0</option>
+                <option class="countrySelect" value="SZ">Swaziland - 0</option>
+                <option class="countrySelect" value="SE">Sweden - 0</option>
+                <option class="countrySelect" value="CH">Switzerland - 0</option>
+                <option class="countrySelect" value="SY">Syrian Arab Republic - 0</option>
+                <option class="countrySelect" value="TW">Taiwan, Province of China - 0</option>
+                <option class="countrySelect" value="TJ">Tajikistan - 0</option>
+                <option class="countrySelect" value="TZ">Tanzania, United Republic of - 0</option>
+                <option class="countrySelect" value="TH">Thailand - 0</option>
+                <option class="countrySelect" value="TL">Timor-Leste - 0</option>
+                <option class="countrySelect" value="TG">Togo - 0</option>
+                <option class="countrySelect" value="TK">Tokelau - 0</option>
+                <option class="countrySelect" value="TO">Tonga - 0</option>
+                <option class="countrySelect" value="TT">Trinidad and Tobago - 0</option>
+                <option class="countrySelect" value="TN">Tunisia - 0</option>
+                <option class="countrySelect" value="TR">Turkey - 0</option>
+                <option class="countrySelect" value="TM">Turkmenistan - 0</option>
+                <option class="countrySelect" value="TC">Turks and Caicos Islands - 0</option>
+                <option class="countrySelect" value="TV">Tuvalu - 0</option>
+                <option class="countrySelect" value="UG">Uganda - 0</option>
+                <option class="countrySelect" value="UA">Ukraine - 0</option>
+                <option class="countrySelect" value="AE">United Arab Emirates - 0</option>
+                <option class="countrySelect" value="GB">United Kingdom - 0</option>
+                <option class="countrySelect" value="US">United States - 0</option>
+                <option class="countrySelect" value="UM">United States Minor Outlying Islands - 0</option>
+                <option class="countrySelect" value="UY">Uruguay - 0</option>
+                <option class="countrySelect" value="UZ">Uzbekistan - 0</option>
+                <option class="countrySelect" value="VU">Vanuatu - 0</option>
+                <option class="countrySelect" value="VE">Venezuela - 0</option>
+                <option class="countrySelect" value="VN">Viet Nam - 0</option>
+                <option class="countrySelect" value="VG">Virgin Islands, British - 0</option>
+                <option class="countrySelect" value="VI">Virgin Islands, U.s. - 0</option>
+                <option class="countrySelect" value="WF">Wallis and Futuna - 0</option>
+                <option class="countrySelect" value="EH">Western Sahara - 0</option>
+                <option class="countrySelect" value="YE">Yemen - 0</option>
+                <option class="countrySelect" value="ZM">Zambia - 0</option>
+                <option class="countrySelect" value="ZW">Zimbabwe - 0</option>
+            </select>
+            <button id="upgradeButton">Upgrade</button>
+        </form>
+    </div>
+
+    
+
+    <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(29, 185, 84,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(29, 185, 84,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(29, 185, 84,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#1db954" />
+            </g>
+        </svg>
+    </div>
+
+    <div id="discord"><a href="https://discord.gg/kR4asanxHP"><img src="./img/discord-v2.svg" alt="My Happy SVG" /></a>
+    </div>
+
+
+    <script>
+        // $(".jstoggle").toggle();
+
+
+        $("#loading-cont").hide();
+        // $("#popText").html('Got Stock Data')
+        //
+        // $("#pop-cont").toggle();
+
+        $("#pop-btn").on("click", function () {
+
+            $("#pop-cont").toggle();
+        });
+
+        var onSubmit = async function (token) {
+            grecaptcha.reset()
+            $("#loading-cont").toggle();
+            const key = document.querySelector("#key").value
+            const email = document.querySelector("#email").value
+            if (key.length > 0 && email.length > 0) {
+                const password = document.querySelector("#password").value
+                const country = document.querySelector("#country").value
+                if (password.length > 0 && (country.indexOf("Select a Country") !== 0)) {
+                    try {
+                        const res = await upgradeAccount(key, email, password, country, token)
+                        $("#loading-cont").toggle();
+                        document.querySelector("#password").value = ""
+                        document.querySelector("#email").value = ""
+                        if (res.success) {
+                            $("#popText").html('Your account is successfully upgraded!')
+                            $("#pop-cont").toggle();
+                        } else {
+                            $("#popText").html(errorCodes[res.message])
+                            $("#pop-cont").toggle();
+                        }
+                    } catch (err) {
+                        $("#loading-cont").toggle();
+                        console.log(err)
+                    }
+                } else {
+                    $("#loading-cont").toggle();
+                    $("#popText").html('Please check the data you entered and try again!')
+                    $("#pop-cont").toggle();
+                }
+            } else if (key.length > 0) {
+                try {
+                    const res = await validateLicense(key, token)
+                    $("#loading-cont").toggle();
+                    if (res) {
+                        if (res.email.length > 0) {
+                            $("#popText").html('Your account is already upgraded. If you lost premium, you can go to renew and renew your account to new premium!')
+                            $("#pop-cont").toggle();
+                            return
+                        }
+                        $(".jstoggle").toggle();
+                        $("#popText").html('Make sure to wait for a minute or two while upgrading or renew. Just submit your details and wait for sometime. If anything goes wrong, You\'ll get a message')
+                        $("#pop-cont").toggle();
+                        return
+                    }
+
+                    $("#popText").html('Invalid License Key. Please contact Administrator about this')
+                    $("#pop-cont").toggle();
+                } catch (err) {
+                    console.log("In error")
+                    console.log(err)
+                    $("#loading-cont").toggle();
+                    $("#popText").html('Something went wrong. Please try again')
+                    $("#pop-cont").toggle();
+                }
+            } else {
+                $("#loading-cont").toggle();
+                $("#popText").html("Key can't be empty")
+                $("#pop-cont").toggle();
+            }
+        }
+
+        var onloadCallback = function () {
+            grecaptcha.render('upgradeButton', {
+                'sitekey': '6LcoUjkeAAAAAJVQ7_Xcj-AjuUkoyn8NboplFavf',
+                'callback': onSubmit
+            });
+        };
+
+
+        async function updateStock() {
+            json = await getStockData()
+
+            const countries = document.querySelectorAll(".countrySelect")
+            for (let country of countries) {
+                if (country.attributes.value) {
+                    if (json[country.attributes.value.value] > 0) {
+                        country.innerHTML = country.innerHTML.split(" - ")[0] + " - " + json[country.attributes.value.value]
+                    } else {
+                        country.setAttribute("disabled", true)
+                    }
+                }
+            }
+        }
+        updateStock()
+
+    </script>
+
+</body>
+
+</html>
