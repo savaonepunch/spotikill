@@ -1,1 +1,1 @@
-https://spotikill.cc/index
+https://spotikill.cc/
